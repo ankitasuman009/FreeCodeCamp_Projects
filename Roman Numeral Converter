@@ -14,7 +14,3 @@ function convertToRoman(num) {
 }
 
 convertToRoman(36);
-
-function romanize (num) {
-
-}

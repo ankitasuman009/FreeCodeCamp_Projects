@@ -1,0 +1,25 @@
+function isLetter(code) {
+  if ((code > 47 && code < 58) || 
+        (code > 64 && code < 91) || 
+        (code > 96 && code < 123)) 
+        return true;
+  return false;
+}
+
+function palindrome(str) {
+  var i=0, j=str.length-1;
+  while(i<j){
+    if(!isLetter(str.charCodeAt(i)) || !isLetter(str.charCodeAt(j))){
+      if(!isLetter(str.charCodeAt(i))) i++;
+      if(!isLetter(str.charCodeAt(j))) j--;
+      continue;
+    } 
+    else if(str.charAt(i).toLowerCase()!=str.charAt(j).toLowerCase()) return false; 
+    else {
+      i++; j--;
+      }
+    }
+  return true;
+}
+
+palindrome("eye");

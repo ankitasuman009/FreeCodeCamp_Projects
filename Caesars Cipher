@@ -1,0 +1,21 @@
+function rot13(str) {
+  var regex = /[A-Z]/;
+  var str2 = "";
+  let i = 0;
+  while(i<str.length){
+  if(regex.test(str.charAt(i))) {
+    // console.log("i", str.charAt(i));
+    if(str.charCodeAt(i)+13<91) str2 += String.fromCharCode(str.charCodeAt(i)+13);
+    else str2 += String.fromCharCode(((str.charCodeAt(i)+13)%91) + 65);
+  }
+  else str2 += str.charAt(i);
+  
+    i++;
+  }
+  return str2;
+}
+
+rot13("SERR PBQR PNZC");
+rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.");
+rot13("SERR CVMMN!");
+rot13("SERR YBIR?");

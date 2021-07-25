@@ -1,0 +1,38 @@
+function checkCashRegister(price, cash, cid) {
+  
+  const ch = [10000, 2000, 1000, 500, 100, 25, 10, 5, 1];
+  function newFunc(price, cash, cid){
+    let money = [
+      ["ONE HUNDRED", 0],
+      ["TWENTY", 0],
+      ["TEN", 0],
+      ["FIVE", 0],
+      ["ONE", 0],
+      ["QUARTER", 0],
+      ["DIME", 0],
+      ["NICKEL", 0],
+      ["PENNY", 0],
+    ];
+    var changeNeeded = (cash - price) * 100;
+    let avail = [...cid].reverse().map(c => [c[0], c[1]*100]);
+    var cidSum = avail.reduce((sum, c) => (sum + c[1]), 0) / 100;
+    if(cidSum===changeNeeded/100) return {status: "CLOSED", change: [...cid]};
+    else for(let i=0;i<avail.length;i++){
+      while(ch[i]<=changeNeeded && avail[i][1]>0){
+        money[i][1] += ch[i];
+        changeNeeded -= ch[i];
+        avail[i][1] -= ch[i];
+      }
+    };
+    let changeClean = money
+              .map(c => [c[0], c[1]/100])
+              .filter(c => c[1]!==0);
+    let totalChange = changeClean.reduce((sum, c) => (sum + c[1]), 0);
+    if(totalChange<changeNeeded) return {status: "INSUFFICIENT_FUNDS", change: []};
+    return {status: "OPEN", change: [...changeClean]};
+  }
+  return newFunc(price, cash, cid);
+}
+
+
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);

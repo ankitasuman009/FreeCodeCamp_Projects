@@ -10,3 +10,4 @@
 
 ## Data Visvualization projects
 1. Visualize Data with a Bar Chart  https://codepen.io/ankitasuman/pen/wvMZMzg
+2. Visualize Data with a Scatterplot Graph  https://codepen.io/ankitasuman/pen/abWGKGP

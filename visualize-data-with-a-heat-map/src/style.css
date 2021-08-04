@@ -1,0 +1,30 @@
+.cell{fill:black;} 
+.cell:hover {
+    fill: brown;
+  }
+.title {
+  font-size: 40px;  
+}
+.tooltip {
+  background-color: lightblue;
+  position: absolute;
+  opacity: 0;
+  color: #191919;
+  font-size: 15px;
+  padding: 5px;
+  pointer-events: none;
+  border: 2px solid #8f8779;
+  border-radius: 3px;
+}
+.legend{
+  fill:lightblue;
+}
+body{
+  background-color: lightblue;
+  color: darkblue;
+}
+svg{background-color: whitesmoke;
+  border-style: double;
+  border-color:darkblue;
+
+}

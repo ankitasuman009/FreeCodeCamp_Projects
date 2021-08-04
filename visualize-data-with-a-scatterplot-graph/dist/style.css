@@ -1,0 +1,31 @@
+.dot{fill:black;} 
+.dot:hover {
+    fill: brown;
+  }
+.title {
+  font-size: 20px;
+  text-align: left;
+}
+.tooltip {
+  background-color: lightblue;
+  position: absolute;
+  opacity: 0;
+  color: #191919;
+  font-size: 15px;
+  padding: 5px;
+  pointer-events: none;
+  border: 2px solid #8f8779;
+  border-radius: 3px;
+}
+.legend{
+  fill:white;
+}
+body{
+  background-color: white;
+  color: darkblue;
+}
+svg{background-color: whitesmoke;
+  border-style: double;
+  border-color:darkblue;
+
+}

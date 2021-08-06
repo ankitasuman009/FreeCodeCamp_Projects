@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Build a Survey Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="UTF-8">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+  </head>
+    <body id="main">
+      <div class="container">
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+        <form id="survey-form">
+          <div class="form-group">
+            <label id="name-label">Name: </label>
+            <input id="name" name="name" type="text" class="form-control" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label id="email-label">Email: </label>
+            <input id="email" name="email" type="email" class="form-control" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <label id="number-label">Age: </label>
+            <input id="number" name="number" type="number" class="form-control" min="18" max="35" placeholder="Enter your Age" required />
+          </div>
+          <div class="form-group">
+            <label>Role: </label>
+            <select id="dropdown" class="form-control" name="name">
+            <option>Student</option>
+            <option>Intern</option>
+            <option>Full Time</option>
+            <option>Other</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <p>Gender: </p>
+            <label><input name="name" value="male" class="input-radio" type="radio">Male </label>
+            <label><input name="name" value="female"class="input-radio" type="radio">Female </label>
+            <label><input name="name" value="other"class="input-radio" type="radio">Other </label>
+          </div>
+          
+          <div class="form-group">
+            <p>Course completed </p>
+            <label><input name="prefer" value="responsive-web-design" type="checkbox" class="input-checkbox" />Responsive Web Design</label >
+            <label><input name="prefer" value="javaScript-algorithm-and-data-structure" type="checkbox" class="input-checkbox" />JavaScript Algorithm and Data Structure</label >
+            <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Data Visualization</label >
+            <label><input name="prefer" value="front-end-development-libraries" type="checkbox" class="input-checkbox" />Front End Development Libraries</label>
+            <label><input name="prefer" value="apis-and-microservices" type="checkbox" class="input-checkbox" />APIs and Microservices</label>
+            <label><input name="prefer" value="quality-assurance" type="checkbox" class="input-checkbox" />Quality Assurance</label>
+            <label><input name="prefer" value="scientific-computing-with-python" type="checkbox" class="input-checkbox" />Scientific Computing with Python</label>
+            <label><input name="prefer" value="data-analysis-with-python" type="checkbox" class="input-checkbox" />Data Analysis with Python</label>
+            <label><input name="prefer" value="information-security" type="checkbox" class="input-checkbox" />Information Security</label>
+            <label><input name="prefer" value="machine-learning-with-python" type="checkbox" class="input-checkbox" />Machine Learning with Python</label>
+          </div>
+          <div class="form-group">
+            <p>Any suggestions?</p>
+            <textarea id="comments" class="input-textarea" name="comment" rows="4" cols="50" placeholder="Enter your suggestions here..."  ></textarea>
+    </div>
+          <div class="form-group"> 
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
